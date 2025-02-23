@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#summary">Summary</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#game">Play a Game</a></li>
+                <li><a href="javascript:void(0);" onclick="toggleDarkMode()">Toggle Dark Mode</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="summary" data-aos="fade-up">
+            <h2>Summary</h2>
+            <p>I am a passionate web developer with experience in creating innovative and efficient solutions. Welcome to my portfolio! My journey into web development began with a love for coding and problem-solving. Over the years, I have honed my skills and worked on various projects that showcase my ability to adapt and excel in the ever-evolving tech world.</p>
+        </section>
+        <section id="about" data-aos="fade-up">
+            <h2>About Me</h2>
+            <p>Hello! My name is Miguel, and I am a web developer with a strong foundation in HTML, CSS, JavaScript, and React. I have a knack for creating visually appealing and user-friendly websites. When I'm not coding, you can find me exploring new technologies, reading about the latest trends in web development, or enjoying a good book.</p>
+        </section>
+        <section id="projects" data-aos="fade-up">
+            <h2>Projects</h2>
+            <div class="project">
+                <h3>Personal Blog</h3>
+                <p>This project involved creating a personal blog using HTML, CSS, and JavaScript. The blog features responsive design, interactive elements, and a clean layout. It serves as a platform to share my thoughts on web development, technology, and personal experiences.</p>
+            </div>
+            <div class="project">
+                <h3>To-Do List App</h3>
+                <p>Developed a to-do list application using React. This app allows users to add, edit, and delete tasks, helping them manage their daily activities efficiently. The project helped me improve my React skills and understand state management better.</p>
+            </div>
+            <div class="project">
+                <h3>Portfolio Website</h3>
+                <p>A portfolio website to showcase my skills, projects, and experience. This project highlights my ability to design and develop a professional online presence. It includes sections such as summary, about me, projects, skills, and contact.</p>
+            </div>
+        </section>
+        <section id="skills" data-aos="fade-up">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skill" data-skill="90%">
+                    <h3>HTML & CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level"></div>
+                    </div>
+                    <span class="skill-percent">90%</span>
+                </div>
+                <div class="skill" data-skill="80%">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level"></div>
+                    </div>
+                    <span class="skill-percent">80%</span>
+                </div>
+                <div class="skill" data-skill="70%">
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level"></div>
+                    </div>
+                    <span class="skill-percent">70%</span>
+                </div>
+                <div class="skill" data-skill="85%">
+                    <h3>Web Development</h3>
+                    <div class="skill-bar">
+                        <div class="skill-level"></div>
+                    </div>
+                    <span class="skill-percent">85%</span>
+                </div>
+            </div>
+        </section>
+        <section id="contact" data-aos="fade-up">
+            <h2>Contact</h2>
+            <form id="contact-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Send</button>
+                <p id="form-message" class="form-message"></p>
+            </form>
+        </section>
+        <section id="game" data-aos="fade-up">
+            <h2>Play a Game: Guess the Number</h2>
+            <div class="game-container">
+                <div class="guess-number-game">
+                    <p>Guess a number between 1 and 100:</p>
+                    <input type="number" id="guess-input" min="1" max="100">
+                    <button id="guess-button">Guess</button>
+                    <p id="game-status"></p>
+                </div>
+            </div>
+        </section>
+        <section id="comments" data-aos="fade-up">
+            <h2>Comments</h2>
+            <form>
+                <label for="comment">Write a comment:</label>
+                <textarea id="comment" name="comment"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+            <div id="comments-list">
+                <!-- Comments will appear here -->
+            </div>
+        </section>
+        <section id="newsletter" data-aos="fade-up">
+            <h2>Subscribe to our Newsletter</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="newsletter-email" name="email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank">LinkedIn</a>
+            <a href="https://github.com/your-profile" target="_blank">GitHub</a>
+        </div>
+        <div class="social-share">
+            <a href="https://twitter.com/share?url=YOUR_URL" target="_blank">Share on Twitter</a>
+        </div>
+    </main>
+
+    <!-- Back to top button -->
+    <button id="toTop" class="to-top">↑</button>
+
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+    <footer>
+        <p>&copy; 2025 Miguel. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
